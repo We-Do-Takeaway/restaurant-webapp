@@ -25,7 +25,7 @@ const App: React.FC = () => (
   <ApolloProvider client={client}>
     <ReactKeycloakProvider authClient={keycloak} onTokens={tokenLogger}>
       <CssBaseline />
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <RouteWithLayout
           exact
           path="/"
