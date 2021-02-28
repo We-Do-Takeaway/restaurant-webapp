@@ -1,0 +1,81 @@
+{
+  "name": "restaurant-webapp",
+  "version": "0.1.0",
+  "description": "A web application for use by the restaurant to track order to notify drivers for pickup",
+  "author": "Zac Tolley <zac@thetolleys.com>",
+  "repository": "github:wedotakeaway/restaurant-webapp",
+  "bugs": {
+    "url": "https://github.com/wedotakeaway/restaurant-webapp/issues"
+  },
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@apollo/client": "^3.3.11",
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@react-keycloak/web": "^3.4.0",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.7.3",
+    "@types/classnames": "^2.2.11",
+    "@types/jest": "^26.0.20",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/jwt-decode": "^3.1.0",
+    "@types/lodash": "^4.14.168",
+    "@types/node": "^14.14.31",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/uuid": "^8.3.0",
+    "@ztolley/eslint-config-typescript": "^2.0.0",
+    "classnames": "^2.2.6",
+    "cypress": "^6.5.0",
+    "cypress-intellij-reporter": "0.0.6",
+    "graphql": "^15.5.0",
+    "husky": "^5.1.1",
+    "jest-fetch-mock": "^3.0.3",
+    "keycloak-js": "^12.0.3",
+    "lint-staged": "^10.5.4",
+    "lodash.get": "^4.4.2",
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-hook-form": "^6.15.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3",
+    "typescript": "^4.2.2",
+    "uuid": "^8.3.2",
+    "winston": "^3.3.3",
+    "winston-transport-browserconsole": "^1.0.5"
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "lint": "eslint src --ext ts --ext .tsx",
+    "lint-staged": "lint-staged",
+    "start": "./env.sh && react-scripts start",
+    "test": "react-scripts test",
+    "test:integration": "./env.sh && cypress run --headless"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "proxy": "https://www.wedotakeaway.com"
+}
