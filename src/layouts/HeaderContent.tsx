@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbarTitle: {
     flexGrow: 1,
-    color: '#000',
+    color: '#fff',
   },
   breadcrumbs: {
     flexWrap: 'wrap',
@@ -76,7 +76,7 @@ export const HeaderContent: React.FC<HeaderContentProps> = ({
     <>
       <AppBar
         position="static"
-        color="default"
+        color="primary"
         elevation={0}
         className={classes.appBar}
       >
